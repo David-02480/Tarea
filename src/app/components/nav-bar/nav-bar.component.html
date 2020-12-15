@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">{{title}}</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">INICIO</a>
+        </li>
+
+        <!--REUTILIZAR LAS SIGUIENTES ETIQUETAS PARA AGREGAR LINK-->
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['cliente-form']">CLIENTE-formulario</a>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['cliente-tabla']">CLIENTE-tabla</a>
+        <li class="nav-item">
+          <a class="nav-link" (click)= showButtons>Avion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink] = "['Menu']">TC19017</a>
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink] = "['listado']">VEHICULOS</a>
+        </li>
+        <!--FIN-->
+
+      </ul>
+    </div>
+</nav>

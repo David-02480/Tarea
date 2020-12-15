@@ -1,0 +1,32 @@
+div{
+    
+    width: 450px;
+    height: 400;
+    background-color: rgb(58, 124, 168);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: rgb(0, 0, 0) 6px 6px 5px;
+}
+
+div h3{
+    color: white
+}
+
+div p{
+    color: white;
+}
+
+div ul{
+    list-style: none;
+    padding: 10px;
+    height: 250px;
+    width: 400px;
+    background-color: rgba(67, 218, 205, 0.466);
+    box-shadow: rgba(32, 97, 75, 0.979) 5px 5px 3px;
+    border-radius: 20px;
+}
+
+div ul li button{
+    margin: 7px;
+}

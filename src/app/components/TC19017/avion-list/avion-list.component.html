@@ -1,0 +1,27 @@
+<h2>Lista de Aviones</h2>
+
+<table class="table table-bordered">
+    <thead>
+      <tr class = "table-primary">
+        <th scope="col">ID</th>
+        <th scope="col">Aerolinea</th>
+        <th scope="col">Origen</th>
+        <th scope="col">Carga Maxima</th>
+        <th scope="col">Tipo de vuelo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let vuelo of vuelos">
+        <th scope="row" class="table-success" *ngIf = "vuelo.tipoVuelo">{{vuelo.id}}</th>
+        <td class="table-success" *ngIf = "vuelo.tipoVuelo">{{vuelo.nomAerolinea}}</td>
+        <td class="table-success" *ngIf = "vuelo.tipoVuelo">{{vuelo.origen}}</td>
+        <td class="table-success" *ngIf = "vuelo.tipoVuelo">{{vuelo.cargaMax}} kg</td>
+        <td class="table-success" *ngIf = "vuelo.tipoVuelo">Comercial</td>
+        <th scope="row" class="table-active" *ngIf = "!vuelo.tipoVuelo">{{vuelo.id}}</th>
+        <td class="table-active" *ngIf = "!vuelo.tipoVuelo">{{vuelo.nomAerolinea}}</td>
+        <td class="table-active" *ngIf = "!vuelo.tipoVuelo">{{vuelo.origen}}</td>
+        <td class="table-active" *ngIf = "!vuelo.tipoVuelo">{{vuelo.cargaMax}} kg</td>
+        <td class="table-active" *ngIf = "!vuelo.tipoVuelo">No Comercial</td>
+      </tr>
+    </tbody>
+  </table>

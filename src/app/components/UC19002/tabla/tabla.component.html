@@ -1,0 +1,22 @@
+<table  class="table">
+    <thead class="thead-dark">
+      <tr >
+        <th scope="col">DUI</th>
+        <th scope="col">Nombres</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Capital en cuenta</th>
+        <th scope="col">Tipo de cuenta</th>
+      </tr>
+    </thead>
+   <tbody>
+      <tr (click)="abrirParaEditar(cliente)" [routerLink]="['actualizar-cliente']" *ngFor="let cliente of clientes"class="list-group-item-action">
+        <td>{{cliente.dui}}</td>
+        <td>{{cliente.nombres}}</td>
+        <td>{{cliente.apellidos}}</td>
+        <td>{{cliente.capital}}</td>
+        <td *ngIf="cliente.esCorriente" class="text-primary font-weight-bold">Corriene</td>
+        <td *ngIf="!cliente.esCorriente" class="text-danger font-weight-bold">No corriente</td>
+      </tr>
+    </tbody>
+  </table>
+  

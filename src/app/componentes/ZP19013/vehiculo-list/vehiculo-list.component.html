@@ -1,0 +1,16 @@
+<div class="container mt-4 row">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="row container mt-4 mb-4">
+        <div *ngFor = "let vehiculo of vehiculos" class="card border-success ml-4 mt-4" style="width: 18rem;">
+          <div class="card-header bg-transparent border-success">{{"Marca: "+vehiculo.marca}}</div>
+          <div class="card-body text-success">
+            <h5 class="card-title">{{"Modelo: "+vehiculo.modelo}}</h5>
+            <p class="card-text">{{ "Año de fabricacion: " + vehiculo.aFabricacion}}</p>
+            <hr>
+          </div>
+          <div class="card-footer text-right bg-transparent border-success">
+              <button class="btn btn-primary">Editar</button>
+              <button class="btn ml-2 btn-danger">Eliminar</button>
+        </div>
+  </div>
